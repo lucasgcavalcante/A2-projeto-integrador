@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Café Aroma - Cardápio Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="container" role="main" aria-labelledby="title">
+        <header>
+            <h1 id="title">Café Aroma</h1>
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+                alt="Imagem ilustrativa de café" />
+            <p class="description">O melhor café artesanal da cidade, preparado com cuidado e dedicação para você
+                começar bem o seu dia.</p>
+        </header>
+
+        <section aria-label="Cardápio">
+            <div id="menu"></div>
+        </section>
+
+        <section aria-label="Número da mesa">
+            <label for="mesa">Número da Mesa:</label>
+            <input type="number" id="mesa" class="form-control" min="1" placeholder="Digite o número da mesa"
+                aria-required="true" />
+            <div id="erro-mesa" role="alert">Por favor, informe o número da mesa.</div>
+        </section>
+
+        <button id="finalizar" class="btn btn-success btn-lg w-100 mt-4" aria-label="Finalizar pedido">Finalizar
+            Pedido</button>
+
+        <section id="resumo-pedido" aria-live="polite" aria-label="Resumo do pedido"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
